@@ -1,0 +1,20 @@
+{
+  "name": "first",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["eventPage.js"]
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "tabs", "<all_urls>"],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
